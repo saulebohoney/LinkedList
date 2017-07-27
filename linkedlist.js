@@ -120,13 +120,6 @@ list.insert(4,11);
 list.insert(5,12);
 list.insert(6,13);
 
-//list.remove(1);
-//console.log(PrintList(list));
-//console.log(sizeList(list));
-//console.log(isEmpty(list));
-//console.log(findPrev(list, 8));
-//console.log(findLast(list));
-
 //Write an algorithm to find the middle element of a linked list without using the .length property. 
 function findMiddle (list) {
     let node=list.head;
@@ -142,9 +135,6 @@ function findMiddle (list) {
     return p2;
 }
 
-
-
-
 //Write an algorithm to find the third element from the end of a linked list without using the .length property.
 function findThird (list){
     let node =list.head;
@@ -154,6 +144,34 @@ function findThird (list){
     return node;
 }
 
+//Write an algorithm to reverse a linked list. 
+//For this exercise, notice, we are not asking you to disply the linked list 
+//from the end or use another linked list to store the value in reverse order.
+//Your program should reverse the direction of a given singly-linked list. 
+//In other words, all pointers should point backwards. 
+//Your algorithm should take linear time O(n). BONUS: Solve this problem using recursive algorithm (and vice versa)
+function reverse(list) {
+    let node = list.head;
+    let p1=node;
+    let previous= null;
+    console.log(list);
+    
+    while (node){
+        node.next = previous;
+        previous=node;
+        
+        if(node.next){
+            node=node.next;
+        }else{
+            node=null;
+        }
+    }
+    console.log("bye",previous);
+    console.log("hello!",node);
+    return previous;
+
+}
+
 //list.remove(1);
 //console.log(PrintList(list));
 //console.log(sizeList(list));
@@ -161,4 +179,6 @@ function findThird (list){
 //console.log(findPrev(list, 8));
 //console.log(findLast(list));
 //console.log(findThird(list));
-console.log(findMiddle(list));
+//console.log(findMiddle(list));
+console.log(reverse(list));
+

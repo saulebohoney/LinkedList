@@ -107,8 +107,8 @@ function findPrev(list, value){
 function findLast(list){
     let node = list.head;
     while(node.next !==null) {
-         node =node.next;
-     }
+        node =node.next;
+    }
     return node;
 }
 
@@ -116,6 +116,9 @@ list.insert(0,7);
 list.insert(1,6);
 list.insert(2,8);
 list.insert(3,10);
+list.insert(4,11);
+list.insert(5,12);
+list.insert(6,13);
 
 //list.remove(1);
 //console.log(PrintList(list));
@@ -125,13 +128,27 @@ list.insert(3,10);
 //console.log(findLast(list));
 
 //Write an algorithm to find the middle element of a linked list without using the .length property. 
+function findMiddle (list) {
+    let node=list.head;
+    let p1= node;
+    let p2=node;
+    console.log("hello!",p2);
+    console.log("bye!",p1);
+  
+    while (p1.next !==null && p1.next.next != null) {
+        p2 = p2.next;
+        p1 = p1.next.next;
+    }
+    return p2;
+}
+
+
 
 
 //Write an algorithm to find the third element from the end of a linked list without using the .length property.
-
 function findThird (list){
     let node =list.head;
-    while(node.next.next.next) !==null){
+    while(node.next.next.next!== null){
         node =node.next;
     }
     return node;
@@ -143,4 +160,5 @@ function findThird (list){
 //console.log(isEmpty(list));
 //console.log(findPrev(list, 8));
 //console.log(findLast(list));
-console.log(findThird(list));
+//console.log(findThird(list));
+console.log(findMiddle(list));

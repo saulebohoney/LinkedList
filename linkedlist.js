@@ -144,9 +144,9 @@ function findThird (list){
     return node;
 }
 
-//Write an algorithm to reverse a linked list. 
-//For this exercise, notice, we are not asking you to disply the linked list 
-//from the end or use another linked list to store the value in reverse order.
+//Write an algorithm to reverse a linked list.
+//For this exercise, notice, we are not asking you to disply 
+//the linked list from the end or use another linked list to store the value in reverse order.
 //Your program should reverse the direction of a given singly-linked list. 
 //In other words, all pointers should point backwards. 
 //Your algorithm should take linear time O(n). BONUS: Solve this problem using recursive algorithm (and vice versa)
@@ -154,7 +154,7 @@ function reverse(list) {
     let node = list.head;
     let p1=node;
     let previous= null;
-    console.log(list);
+    //console.log(list);
     
     while (node){
         node.next = previous;
